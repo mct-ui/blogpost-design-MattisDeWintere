@@ -7,6 +7,20 @@
 /*---------------------------------------/*
  # GENERIC
 /*---------------------------------------*/
+@font-face {
+  font-family: "Inter Web";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2");
+}
+@font-face {
+  font-family: "Inter Web";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2");
+}
 *,
 *:before,
 *:after {
@@ -36,20 +50,21 @@ img {
 html {
   font-size: 100%;
   line-height: 1.5;
-  font-family: Helvetica, arial, sans-serif;
-  color: hsl(198.0786026201, 10%, 30%);
+  font-family: "droid serif", arial, sans-serif;
+  color: hsl(198.0786026201deg, 10%, 30%);
   scroll-behavior: smooth;
+  font-family: "droid serif", arial, sans-serif;
 }
 
 /*
     Customize the background color and color to match your design.
 */
 ::-moz-selection {
-  background: hsl(198.0786026201, 100%, 50%);
+  background: hsl(198.0786026201deg, 100%, 50%);
   color: white;
 }
 ::selection {
-  background: hsl(198.0786026201, 100%, 50%);
+  background: hsl(198.0786026201deg, 100%, 50%);
   color: white;
 }
 
@@ -58,11 +73,16 @@ html {
     ---
     Default markup for typographic elements
 */
+h1, h2, h3 {
+  color: hsl(198.0786026201deg, 10%, 30%);
+}
+
 h1 {
   font-size: 1.8020324707rem;
   font-weight: 700;
   line-height: 2rem;
   margin-bottom: 1.5rem;
+  font-family: "playfair display";
 }
 
 h2 {
@@ -70,6 +90,7 @@ h2 {
   font-size: 1.423828125rem;
   line-height: 1.5rem;
   margin-bottom: 1.5rem;
+  font-family: "Inter Web", serif;
 }
 
 h3 {
@@ -119,31 +140,31 @@ figcaption {
   font-size: 0.8888888889rem;
   line-height: 1rem;
   margin-top: 0.5rem;
-  color: hsl(198.0786026201, 10%, 50%);
+  color: hsl(198.0786026201deg, 10%, 50%);
 }
 
 hr {
   border: 0;
   height: 1px;
-  background: hsl(198.0786026201, 10%, 90%);
+  background: hsl(198.0786026201deg, 10%, 90%);
   margin-bottom: 1.5rem;
 }
 
 a {
-  color: hsl(198.0786026201, 100%, 40%);
+  color: hsl(198.0786026201deg, 100%, 40%);
   transition: all 0.1s ease-in-out;
 }
 
 a:visited {
-  color: hsl(198.0786026201, 100%, 40%);
+  color: hsl(198.0786026201deg, 100%, 40%);
 }
 
 a:hover {
-  color: hsl(198.0786026201, 100%, 50%);
+  color: hsl(198.0786026201deg, 100%, 50%);
 }
 
 a:active {
-  color: hsl(198.0786026201, 100%, 30%);
+  color: hsl(198.0786026201deg, 100%, 30%);
 }
 
 /*---------------------------------------/*
@@ -165,11 +186,11 @@ a:active {
 }
 
 .o-row--primary {
-  background: hsl(198.0786026201, 95%, 65%);
+  background: hsl(198.0786026201deg, 95%, 65%);
 }
 
 .o-row--grey-dark {
-  background-color: hsl(198.0786026201, 10%, 20%);
+  background-color: hsl(198.0786026201deg, 10%, 20%);
   color: white;
 }
 
@@ -312,6 +333,31 @@ a:active {
 /*
     Components: Author
 */
+.c-author__meta {
+  font-size: 0.8888888889rem;
+  font-family: "Inter Web", serif;
+  line-height: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+.c-author__name {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.c-author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.c-author__image {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
+
 /*
     Components: Quote
 */
@@ -337,6 +383,10 @@ a:active {
     Scope: Content
     Specific behaviour inside s-content class
 */
+.s-content * + h2 {
+  margin-top: 3rem;
+}
+
 /*---------------------------------------/*
  # UTILITIES
 /*---------------------------------------*/
